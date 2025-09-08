@@ -1,0 +1,358 @@
+:root {
+  --primary: #334499;
+  --primary-dark: #2B387C;
+  --bg: #FFFFFC;
+  --border: #B0AFB5;
+  --white: #FFFFFF;
+  --yellow: #eef13d;
+}
+
+/* styling nav bar */
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial;
+  background: var(--bg);
+  color: #111;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--yellow);
+  border-bottom: 1px solid var(--border);
+  height: 10rem;
+}
+
+.nav__brand {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+.link {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.link--active {
+  background: var(--primary);
+  color: var(--white);
+  display: inline-block;
+  padding: 6px 8px;
+  border-radius: 6px;
+  margin-left: -400px;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+/* mobile navbar */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav__brand {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .link {
+    margin: 5px 0;
+  }
+}
+
+.page {
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+
+/*styling job card*/
+.job-card {
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: var(--white);
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: var(--primary);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.jobs-panel {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* styling search bar */
+
+
+.search-bar {
+  margin-bottom: 1.5rem;
+  margin-left: 200px;
+  margin-top: 60px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-bar input {
+  width: 15rem;
+  height: 2rem;
+  border-radius: px;
+  border: 2px solid gray;
+  padding: 10px;
+  font-size: 1rem;
+  flex: 1;
+  min-width: 180px;
+}
+
+.search-bar button {
+  width: 10rem;
+  border: 2px solid gray;
+  padding: 5px;
+  border-radius: px;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+  border-left: none;
+  font-size: 1rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+}
+
+/* career page */
+.brand {
+  margin-top: -18rem;
+  font-size: 5rem;
+  font-style: oblique;
+  margin-left: 300px;
+}
+
+.brand-logo {
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+.work {
+  margin-top: -10px;
+  font-size: 2rem;
+  margin-left: 140px;
+}
+
+.careers-layout {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  /* allows wrapping if too small */
+}
+
+.goal {
+  margin-top: 10px;
+  margin-left: -90px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+/* filters */
+
+.filters-panel {
+  width: 250px;
+  margin-top: 200px;
+  flex: 0 0 250px;
+}
+
+
+@media (max-width: 768px) {
+  .careers-layout {
+    flex-direction: column;
+    /* stack sidebar + jobs */
+  }
+
+  .filters-panel {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.filter-group {
+  margin-bottom: 1.5rem;
+}
+
+.filter-group h4 {
+  margin-bottom: 0.5rem;
+}
+
+.filters-panel button {
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 6px 10px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filters-panel button:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.brand-logo {
+  margin-top: 100px;
+  margin-left: -100px;
+}
+
+/* job detail card */
+.job-detail-card {
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: var(--white);
+  margin-top: 20px;
+}
+
+.Apply {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: var(--primary);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  width: 200px;
+}
+
+
+/* application form styling */
+
+.Application-card {
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: var(--white);
+  margin-top: 20px;
+  height: 700px;
+  display: none;
+}
+
+.Application-card.show {
+  display: block;
+  /* visible when "show" class is added */
+}
+
+.application div {
+  padding-bottom: 40px;
+  font-size: larger;
+  font-weight: bolder;
+  display: flex;
+}
+
+.application div label input,
+.application div label select,
+.application div label textarea {
+  width: 300px;
+  height: 30px;
+  flex: 1;
+  margin-left: 10px;
+  max-width: 300px;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.application label {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  /* space between input and error */
+}
+
+.application .error {
+  color: red;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  /* keep on one line */
+}
+
+
+
+
+
+/* submit button */
+.submit {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: var(--primary);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  width: 200px;
+}
+
+/* cancel button */
+.btn-secondary {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: var(--primary);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  width: 100px;
+}
+
+/* submitted card */
+
+.success-message {
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: var(--yellow);
+  margin-top: 20px;
+  height: 200px;
+  font-size: larger;
+  font-weight: bold;
+  font-style: oblique;
+}
